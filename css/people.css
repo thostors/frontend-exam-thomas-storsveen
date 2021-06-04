@@ -1,0 +1,15 @@
+.persons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.persons .name {
+    display: inline-block;
+    width: 20em;
+}
+
+.persons .Category {
+    display: inline-block;
+    width: 20em;
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "name": "amalia",
+    "age": "33",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "grete",
+    "age": "32",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "sivert",
+    "age": "23",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "mons",
+    "age": "24",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "ole",
+    "age": "26",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "glenn",
+    "age": "23",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "tom",
+    "age": "23",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "jonas",
+    "age": "23",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "andre",
+    "age": "23",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "knecker",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "sigmund",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "leif",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "sigrid",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "laura",
+    "age": "32",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "bjorn",
+    "age": "44",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "laif",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Friend"
+  },
+
+  {
+    "name": "Lauritz",
+    "age": "21",
+    "city": "storslett,",
+    "Category": "Family"
+  },
+
+  {
+    "name": "Bjorn",
+    "age": "22",
+    "city": "storslett,",
+    "Category": "Family"
+  },
+
+  {
+    "name": "Elin",
+    "age": "34",
+    "city": "storslett,",
+    "Category": "Family"
+  },
+
+  {
+    "name": "Amalie",
+    "age": "44",
+    "city": "storslett,",
+    "Category": "Family"
+  }
+]

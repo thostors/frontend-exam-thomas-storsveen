@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+
+    <body>
+
+        <body>
+            <h1>Form Validation</h1>
+
+            Your Name
+            <form name="Login" method="post" action="#" onsubmit="return validateForm()">
+
+                <input type="text" name="fName" id="FN"> <br>
+
+                Age <br>
+                <input type="text" name="ageField" id="age"> <br>
+
+                Email <br>
+                <input type="text" name="email" id="e"><br>
+
+                Number <br>
+                <input type="text" name="number" id="numb">
+
+                <input type="submit" name="sub" value="Submit" onclick="updateProfile()">
+            </form>
+            <!-- SCRIPT CODE TAKEN FROM MY OBLIG 3 ASSIGNMENT, KEPT THE VALIDATION ALSO!-->
+
+            <script type="text/javascript">
+                document.querySelector('h1').innerHTML = "Profile";
+                document.querySelector('input[type=submit]').value = "Update";
+                class Profile {
+                    setProfile(name, age, email, numb) {
+                        this.name = name;
+                        this.age = age;
+                        this.email = email;
+                        this.numb = numb;
+                    }
+                    getProfile() {
+                        document.forms['Login']['fName'].value = localStorage.getItem("name");
+                        document.forms['Login']['ageField'].value = localStorage.getItem("age");
+                        document.forms['Login']['email'].value = localStorage.getItem("email");
+                        document.forms['Login']['number'].value = localStorage.getItem("number");
+                    }
+                    saveProfile() {
+                        localStorage.setItem("name", this.name);
+                        localStorage.setItem("age", this.age);
+                        localStorage.setItem("email", this.email);
+                        localStorage.setItem("number", this.numb);
+                    }
+                }
+
+                var myProfile = new Profile();
+
+                function validateForm() {
+                    var x = document.forms['Login']['fName'].value;
+
+                    if (x == null || x == "") {
+                        alert("Please enter your name");
+                        document.getElementById('FN').focus();
+                        return false;
+                    }
+                    else if (x.length < 3) {
+                        alert("Please, enter a name containing atleast 3 letters.");
+                        document.getElementById('FN').focus();
+                        return false;
+                    }
+
+                    var a = document.forms['Login']['ageField'].value;
+                    if (a == null || a == "") {
+                        alert("Sorry, age field can not be empty!");
+                        document.getElementById("age").focus();
+                        return false;
+                    } else if (parseInt(a) < 12 || parseInt(a) > 95) {
+                        alert("Error, age must be between 12 and 95.");
+                        return false;
+                    }
+
+                    var num = document.forms['Login']['number'].value;
+                    var stripped = num.replace(/[\(\)\.\-\ ]/g, '');
+                    if (num == "") {
+                        alert("You did not enter a number!");
+                        return false;
+                    }
+                    else if (isNaN(parseInt(stripped))) {
+                        alert("Error, phone Number can only contain numbers!");
+                        return false;
+                    }
+                    else if (!(stripped.length == 7)) {
+                        alert("Error, invalid phone number lenght!");
+                        return false;
+                    }
+
+                    var em = document.forms['Login']['email'].value;
+                    var atpos = em.indexOf("@ntnu");
+                    var dotpos = em.lastIndexOf(".no");
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= em.length) {
+                        alert("Please enter a valid ntnu.no e-mail!");
+                        return false;
+                    } else {
+                        myProfile.setProfile(x, a, em, stripped);
+                        myProfile.saveProfile();
+                        return true;
+                    }
+                }
+
+                function displayProfile() {
+                    if (localStorage != null) {
+                        myProfile.getProfile();
+                    } else {
+                        console.log("Nothing in storage..");
+                    }
+                }
+                window.onload = function () {
+                    displayProfile()
+                }
+
+                function updateProfile() {
+                    if (validateForm()) {
+                        myProfile.setProfile();
+                    }
+                    else {
+                        alert("Failed to update profile..");
+                    }
+                }
+
+            </script>
+        </body>
+
+</html>
